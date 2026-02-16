@@ -4,7 +4,7 @@ module MaximumSumOfSubArrayWithLengthK
     max_sum = 0
     while (index + k) < nums.length
       sum = nums[index...(index + k)].sum
-      max_sum = sum if sum > max_sum
+      max_sum = [sum, max_sum].max
       index += 1
     end
     max_sum
