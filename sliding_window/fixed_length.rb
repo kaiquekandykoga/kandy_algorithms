@@ -2,7 +2,7 @@ module MaximumSumOfSubArrayWithLengthK
   def self.call(nums, k)
     index = 0
     max_sum = 0
-    while (index + k) < nums.length
+    while (index + k) <= nums.length
       sum = nums[index...(index + k)].sum
       max_sum = [sum, max_sum].max
       index += 1
